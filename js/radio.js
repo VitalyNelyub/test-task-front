@@ -10,9 +10,11 @@ radioContainer.addEventListener("click", () => {
     radioPlayer.play();
     playIcon.style.display = "none";
     pauseIcon.style.display = "block";
+    console.log("play")
   } else {
     radioPlayer.pause();
     playIcon.style.display = "block";
     pauseIcon.style.display = "none";
   }
 });
+

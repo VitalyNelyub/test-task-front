@@ -188,7 +188,11 @@
                 src="./images/logo-horizontal.svg"
                 alt="logo"
               />
-              <!-- <img class="logo-img" src="./images/bors_logo.svg" alt="logo" /> -->
+              <img
+                class="logo-img-desctop"
+                src="./images/bors_logo.svg"
+                alt="logo"
+              />
             </div>
             <div
               class="weather"
@@ -205,31 +209,84 @@
                 >Los Angeles 30 days weather</a
               >
             </div>
-               <div class="socials">
-            <ul class="socials__list">
-              <li class="socials__item">
-                <a class="socials__link" href="#">
-                  <svg class="socials__icon">
-                    <use href="./images/symbol-defs.svg#tiktok"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">
-                  <svg class="socials__icon">
-                    <use href="./images/symbol-defs.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">
-                  <svg class="socials__icon">
-                    <use href="./images/symbol-defs.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+            <div class="socials">
+              <ul class="socials__list">
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__icon">
+                      <use href="./images/symbol-defs.svg#tiktok"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__icon">
+                      <use href="./images/symbol-defs.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a class="socials__link" href="#">
+                    <svg class="socials__icon">
+                      <use href="./images/symbol-defs.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="head__nav">
+              <div class="popular">
+                <ul class="popular__list-desctop">
+                  <li class="popular__item-desctop">
+                    <a
+                      class="popular__link-desctop popular__link-mail"
+                      href="#"
+                    >
+                      <svg class="popular__icon">
+                        <use href="./images/symbol-defs.svg#mail"></use>
+                      </svg>
+                      Hírlevél</a
+                    >
+                  </li>
+                  <li class="popular__item-desctop">
+                    <a class="popular__link-desctop" href="#"> Horoszkóp</a>
+                  </li>
+                  <li class="popular__item-desctop">
+                    <a class="popular__link-desctop" href="#"> Magazinok</a>
+                  </li>
+                  <li class="popular__item-desctop">
+                    <a class="popular__link-desctop" href="#"> Játék</a>
+                  </li>
+                </ul>
+              </div>
+              <div id="radio">
+                <audio id="radio-player">
+                  <source
+                    src="http://cast.radiogroup.com.ua:8000/avtoradio"
+                    type="audio/mpeg"
+                  />
+                  Ваш браузер не поддерживает воспроизведение аудио.
+                </audio>
+                <div class="controlls"></div>
+                <img
+                  class="radio__play"
+                  src="./images/Retrorádió.png"
+                  alt="Воспроизвести"
+                />
+                <svg class="radio-play__icon">
+                  <use href="./images/symbol-defs.svg#play"></use>
+                </svg>
+                <svg class="radio-pause__icon">
+                  <use href="./images/symbol-defs.svg#pause"></use>
+                </svg>
+                <button class="radio-button">RETRO RADIO</button>
+              </div>
+              <div class="search">
+                <svg class="search__icon">
+                  <use href="./images/symbol-defs.svg#search"></use>
+                </svg>
+              </div>
+            </div>
             <div class="mob__menu">
               <svg class="search__icon">
                 <use href="./images/symbol-defs.svg#search"></use>
@@ -242,8 +299,13 @@
                   ></use>
                 </svg>
               </button>
-              <button type="button" class="menu-close" data-menu-close>
-                <svg width="40" height="40">
+              <button
+                type="button"
+                class="menu-close"
+                style="display: none"
+                data-menu-close
+              >
+                <svg width="40" height="40" style="fill: white">
                   <use
                     class="menu-btn__icon--close"
                     href="./images/symbol-defs.svg#icon-menu-close"
@@ -254,7 +316,7 @@
           </div>
         </div>
         <div class="header__bottom">
-          <div class="header__navigation header__container">
+          <div class="header__navigation">
             <ul class="nav__list">
               <li class="nav__item">
                 <a class="nav__link" href="#">TÓTH GABI</a>
@@ -266,6 +328,26 @@
                 <a class="nav__link" href="#">KARÁCSONY</a>
               </li>
             </ul>
+            <button class="menu-toggle__button" data-menu-toggle-dt="open">
+              <svg width="40" height="40">
+                <use
+                  class="menu-btn__icon--menu"
+                  href="./images/symbol-defs.svg#icon-menu"
+                ></use>
+              </svg>
+            </button>
+            <button
+              class="menu-toggle__button"
+              data-menu-toggle-dt="close"
+              style="display: none"
+            >
+              <svg width="40" height="40">
+                <use
+                  class="menu-btn__icon--menu"
+                  href="./images/symbol-defs.svg#icon-menu-close"
+                ></use>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="mob-menu is-hidden" data-menu>
@@ -345,118 +427,28 @@
             </div>
           </div>
         </div>
-      </header>
-      <!-- <header class="header">
-        <div class="header__container">
-          <div class="logo">
-            <img class="logo-img" src="./images/bors_logo.svg" alt="logo" />
-            <img
-              class="logo-img"
-              src="./images/logo-horizontal.svg"
-              alt="logo"
-            />
-          </div>
-          <div
-            class="weather"
-            id="ww_3e92c3cc4d210"
-            v="1.3"
-            loc="id"
-            a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"#000000","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","sl_tof":"3","cl_odd":"#00000000","el_wfc":3}'
-          >
-            Weather Data Source:
-            <a
-              href="https://sharpweather.com/weather_los_angeles/30_days/"
-              id="ww_3e92c3cc4d210_u"
-              target="_blank"
-              >Los Angeles 30 days weather</a
-            >
-          </div>
-          <div class="socials">
-            <ul class="socials__list">
-              <li class="socials__item">
-                <a class="socials__link" href="#">
-                  <svg class="socials__icon">
-                    <use href="./images/symbol-defs.svg#tiktok"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">
-                  <svg class="socials__icon">
-                    <use href="./images/symbol-defs.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link" href="#">
-                  <svg class="socials__icon">
-                    <use href="./images/symbol-defs.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="head__nav">
-            <div class="popular">
-              <ul class="popular__list">
-                <li class="popular__item">
-                  <a class="popular__link popular__link-mail" href="#">
-                    <svg class="popular__icon">
-                      <use href="./images/symbol-defs.svg#mail"></use>
-                    </svg>
-                    Hírlevél</a
-                  >
-                </li>
-                <li class="popular__item">
-                  <a class="popular__link" href="#"> Horoszkóp</a>
-                </li>
-                <li class="popular__item">
-                  <a class="popular__link" href="#"> Magazinok</a>
-                </li>
-                <li class="popular__item">
-                  <a class="popular__link" href="#"> Játék</a>
-                </li>
-              </ul>
-            </div>
-            <div id="radio">
-              <audio id="radio-player">
-                <source
-                  src="http://cast.radiogroup.com.ua:8000/avtoradio"
-                  type="audio/mpeg"
-                />
-                Ваш браузер не поддерживает воспроизведение аудио.
-              </audio>
-              <div class="controlls"></div>
-              <img
-                class="radio__play"
-                src="./images/Retrorádió.png"
-                alt="Воспроизвести"
-              />
-              <svg class="radio-play__icon">
-                <use href="./images/symbol-defs.svg#play"></use>
-              </svg>
-              <svg class="radio-pause__icon">
-                <use href="./images/symbol-defs.svg#pause"></use>
-              </svg>
-              <button class="radio-button">RETRO RADIO</button>
-            </div>
-            <div class="search">
-              <svg class="search__icon">
-                <use href="./images/symbol-defs.svg#search"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </header> -->
-      <!-- <div class="test header__container">
-        <div class="header__navigation">
-          <ul class="nav__list">
-            <li class="nav__item">TEST</li>
-            <li class="nav__item">TEST</li>
-            <li class="nav__item">TEST</li>
+        <div class="mob-menu__top-dt">
+          <span class="mob-menu__title-dt">ROVATOK</span>
+          <ul class="mob-menu__list-dt">
+            <li class="mob-menu__item-dt">
+              <a href="./index.html" class="mob-menu__link-dt">AKTUÁLIS</a>
+            </li>
+            <li class="mob-menu__item-dt">
+              <a href="./portfolio.html" class="mob-menu__link-dt">CELEB</a>
+            </li>
+            <li class="mob-menu__item-dt">
+              <a href="" class="mob-menu__link-dt">SPORT</a>
+            </li>
+            <li class="mob-menu__item-dt">
+              <a href="" class="mob-menu__link-dt">TEST ÉS LÉLEK</a>
+            </li>
+            <li class="mob-menu__item-dt">
+              <a href="" class="mob-menu__link-dt">INGATLANT KERESEK!</a>
+            </li>
           </ul>
         </div>
-      </div> -->
+      </header>
+
       <!-- ==== FIN HEADER ==== -->
       <main data-index="0">
         <article class="module-interior" data-mod="atresmedia_module_interior">
@@ -1606,7 +1598,13 @@
     </div>
     <a class="adom-button">Lorem Ipsum</a>
     <!-- ==== FOOTER ==== -->
-
+    <footer>
+      <div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </footer>
     <!-- ==== FOOTER END ==== -->
 
     <script type="text/javascript">
@@ -1682,5 +1680,6 @@
     ></script>
     <script src="./js/radio.js"></script>
     <script src="./js/burger.js"></script>
+    <script src="./js/burgerDesctop.js"></script>
   </body>
 </html>
