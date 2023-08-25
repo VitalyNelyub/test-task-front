@@ -21,3 +21,11 @@ menuCloseButton.addEventListener("click", () => {
   document.body.style.overflow = "auto";
 });
 
+document.addEventListener("click", (event) => {
+  if (!mobMenu.contains(event.target) && !menuOpenButton.contains(event.target)) {
+    mobMenu.classList.add("is-hidden");
+    menuOpenButton.style.display = "block";
+    menuCloseButton.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
