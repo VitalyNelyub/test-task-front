@@ -1,5 +1,9 @@
 header {
   position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 77;
 }
 
 .header__top {
@@ -228,6 +232,10 @@ header {
   }
   @media screen and (min-width: 1024px) {
     width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -461,8 +469,8 @@ ul {
 .footer {
   position: relative;
   margin-top: 80px;
+  background-color: black;
 }
-
 
 .logo__img-footer {
   width: 60px;
@@ -480,11 +488,17 @@ ul {
 
 .footer__top-section {
   padding: 70px 15px 48px 15px;
-  background-color: black;
+  /* background-color: black; */
   @media screen and (min-width: 768px) {
+    width: 768px;
     display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+    margin: 0 auto;
     gap: 40px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 1024px;
   }
 }
 
@@ -573,9 +587,14 @@ ul {
   padding: 50px 15px 60px 15px;
   background-color: #000;
   @media screen and (min-width: 768px) {
+    width: 768px;
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 1024px;
   }
 }
 
@@ -626,7 +645,15 @@ ul {
   color: #797676;
   font-size: 16px;
   margin: 0;
+  transition: all 250ms;
 }
+
+.accordion-header-title:hover,
+.accordion-header-title:focus {
+  color: orange;
+}
+
+
 
 .accordion-content {
   max-height: 0;
